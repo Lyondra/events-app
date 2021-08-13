@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+<!--Header-->
+{% block head %} {{ super() }} {% endblock %}
+{% block title %} {{ super() }} {% endblock %}
+<!--Header End-->
+
+
+<!--Body Content-->
+{% block content %}
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <form method="GET" action="/results">
+        <div class="formUnit">
+          <label for="EventType">Event Type</label>
+          <select class="form-control" id="eventType" name="type" onchange="">
+            <option value="all">All</option>
+            <option value="musical">Musical</option>
+            <option value="theatre">Theatre</option>
+            <option value="concert">Concert</option>
+          </select>
+        </div>
+        <div class="formUnit">
+          <label for="city">Location</label>
+          <select class="form-control" id="city" name="city" onchange="">
+            <option value="all">All</option>
+            <option value="London">London</option>
+            <option value="Bristol">Bristol</option>
+          </select>
+        </div>
+        <div class="formUnit">
+          <label for="budget">Price Range</label>
+          <select class="form-control" id="budget" name="budget" onchange="">
+            <option value="all">All</option>
+            <option value="low">£</option>
+            <option value="average">££</option>
+            <option value="high">£££</option>
+          </select>
+        </div>
+        <div class="submitButton">
+          <input type="submit" class="btn btn-warning" id="submit-button" value="Search Event">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--Body Content End-->
+{% endblock %}
+<!--Body Content End-->
+
+<!--Footer-->
+{% block footer %} {{ super() }} {% endblock %}
+<!--Footer end-->

@@ -1,0 +1,51 @@
+body {
+    background: white;
+}
+
+.container {
+    max-width:100%;
+}
+
+.navbar {
+    background-color: #688492;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    opacity: 50%;
+    }
+
+.footer {
+    background-color: #688492;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    opacity: 50%;
+}
+
+.form-group {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.form-control {
+    max-width: 60%
+}
+
+.formUnit {
+    margin-top: 20px;
+}
+
+option {
+    height: 2em;
+}
+
+.submitButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.result_thumbnail {
+    height: 120px;
+    object-fit: contain;
+}

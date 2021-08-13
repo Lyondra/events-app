@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+  <meta charset="UTF-8">
+  <title>{% block title %} Find Events {% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="/static/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  {% endblock %}
+</head>
+
+<body class="">
+<div class="container">
+  <div class="navbar">
+    Events App
+  </div>
+
+  <div class="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+   {% block footer %}
+  <div class="footer">
+    &copy; 2021 by Bosa, Hannah, Lyondra, Patricia, Yasemin
+  </div>
+    {% endblock %}
+
+</div>
+</body>
+</html>
