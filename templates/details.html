@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+
 {% block head %} {{ super() }} {% endblock %}
 {% block title %} {{ super() }} {% endblock %}
 <!--Header End-->
@@ -8,7 +10,21 @@
 
 <h3>Event Details:</h3>
 
+<br/><br/>
 
+{{ event['title'] }}<br/>
+<img class="result_thumbnail" src="{{ event['image_path'] }}"/><br/>
+{{ event['datetime'] }}<br/>
+{{ event['type'] }}<br/>
+{{ event['budget'] }}<br/>
+{{ event['city'] }}<br/>
+{{ event['address'] }}<br/>
+{{ event['description'] }}<br/>
+likes: {{ event['likes'] }}<br/>
+<input class="btn btn-warning" type="button" value="Like">
+<br>
+<hr/>
+<br>
 
 
 {% endblock %}

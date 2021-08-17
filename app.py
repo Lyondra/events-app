@@ -38,6 +38,13 @@ def results_page():
     return render_template('results.html', type=type, city=city, budget=budget, events=events, count=count)
 
 
+@app.route("/details")
+def details():
+    event_id = request.args.get('event_id')  # save the event_id from the url to a variable
+    event = get_event_by_id(event_id)
+    return render_template('details.html', event=event)  # pass the full event object to the flask template engine
+
+
 def get_events_by_type_city_budget(type, city, budget):
     events = mock_events
     if type != 'all':
@@ -47,6 +54,12 @@ def get_events_by_type_city_budget(type, city, budget):
     if budget != 'all':
         events = list(filter(lambda obj: obj.budget == budget, events))
     return events
+
+
+def get_event_by_id(event_id):
+    events = mock_events
+    event_id = list(filter(lambda obj: obj.event_id == event_id, events))[0]
+    return event_id
 
 
 app.run(debug=True)
