@@ -14,29 +14,31 @@
     <div class="form-group">
       <form method="GET" action="/results">
         <div class="formUnit">
-          <label for="EventType">Event Type</label>
+          <label for="EventType">What</label>
           <select class="form-control" id="eventType" name="type" onchange="">
-            <option value="all">All</option>
-            <option value="musical">Musical</option>
-            <option value="theatre">Theatre</option>
-            <option value="concert">Concert</option>
+            <option value="Music">Music</option>
+            <option value="Sports">Sports</option>
+            <option value="Arts & Theatre">Arts & Theatre</option>
+            <option value="Film">Film</option>
+            <option value="Miscellaneous">Miscellaneous</option>
           </select>
         </div>
         <div class="formUnit">
-          <label for="city">Location</label>
+          <label for="city">Where</label>
           <select class="form-control" id="city" name="city" onchange="">
-            <option value="all">All</option>
             <option value="London">London</option>
-            <option value="Bristol">Bristol</option>
+            <option value="Manchester">Manchester</option>
+            <option value="Birmingham">Birmingham</option>
+            <option value="Leeds">Leeds</option>
+            <option value="Glasgow">Glasgow</option>
           </select>
         </div>
         <div class="formUnit">
-          <label for="budget">Price Range</label>
-          <select class="form-control" id="budget" name="budget" onchange="">
-            <option value="all">All</option>
-            <option value="low">£</option>
-            <option value="average">££</option>
-            <option value="high">£££</option>
+          <label for="days">When</label>
+          <select class="form-control" id="days" name="days" onchange="">
+            <option value="1">Today</option>
+            <option value="2">Today & Tomorrow</option>
+            <option value="7">Next 7 days</option>
           </select>
         </div>
         <div class="submitButton">

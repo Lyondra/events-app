@@ -14,18 +14,21 @@
 
 {{ event['title'] }}<br/>
 <img class="result_thumbnail" src="{{ event['image_path'] }}"/><br/>
-{{ event['datetime'] }}<br/>
-{{ event['type'] }}<br/>
-{{ event['budget'] }}<br/>
-{{ event['city'] }}<br/>
-{{ event['address'] }}<br/>
-{{ event['description'] }}<br/>
-likes: {{ event['likes'] }}<br/>
-<input class="btn btn-warning" type="button" value="Like">
+Start date time: {{ event['start_date_time'] }}<br/>
+Type: {{ event['type'] }}<br/>
+City: {{ event['city'] }}<br/>
+Address: {{ event['address'] }}<br/>
+Likes: <div id="like_value">{{ event['likes'] }}</div><br/>
+<input id="like_button" class="btn btn-warning" type="button" value="Like" onclick="likeButtonClickHandler();">
 <br>
 <hr/>
 <br>
 
+<script>
+function likeButtonClickHandler() {
+    // TODO...
+}
+</script>
 
 {% endblock %}
 <!--Body Content Ends-->
