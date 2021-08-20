@@ -9,15 +9,21 @@
 <!--Body Content-->
 {% block content %}
 
-{{ count }} {{ type }} event(s) in {{ city }} (for a {{ budget }} budget)
+{{ count }} {{ type }} event(s) in {{ city }} ({{ days }} day(s) considered)
+{% if mock == '1' %}
+    powered by MOCK
+{% else %}
+    powered by ticketmaster API
+{% endif %}
 <br>
   {% for event in events %}
   {{ event['title'] }}<br/>
   <img class="result_thumbnail" src="{{ event['image_path'] }}"/><br/>
-  {{ event['datetime'] }}<br/>
-  {{ event['address'] }}<br/>
+  {{ event['start_date_time'] }}<br/>
+  {{ event['city'] }} - {{ event['address'] }}<br/>
   <form class="form-search" action="/details" method="get">
     <input type="hidden" name="event_id" value="{{ event['event_id'] }}">
+    <input type="hidden" name="mock" value="{{ mock }}"><!-- propagate MOCK choice to details page -->
     <input class="btn btn-warning" type="submit" value="More Details...">
   </form>
   <br>
