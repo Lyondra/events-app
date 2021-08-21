@@ -9,7 +9,8 @@ class EventConverter:
         # any settings useful for the converter can be put here, such as date format to be read if relevant
         self.default_likes = default_likes
 
-    # convert an event such as the one from json/event_search_response_example.json into our class
+    # convert TM event (in dictionary form) to our event class: example event format is in
+    # event_search_response_example.json file
     def ticketmaster_event_to_app_event(self, ticketmaster_event_dict):
         event_id = ticketmaster_event_dict["id"]
         title = ticketmaster_event_dict["name"]
@@ -30,7 +31,7 @@ class EventConverter:
         # Address/coordinates fields
         venue1 = ticketmaster_event_dict["_embedded"]["venues"][0]
         city = venue1["city"]["name"]
-        address = venue1["address"]["line1"] + ", " + venue1["postalCode"]
+        address = venue1["name"] + ", " + venue1["address"]["line1"] + ", " + venue1["postalCode"]
         latitude = venue1["location"]["latitude"]
         longitude = venue1["location"]["longitude"]
 
