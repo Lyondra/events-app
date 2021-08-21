@@ -75,7 +75,9 @@ def details_page():
 
 @app.route("/api/event/<string:event_id>/like", methods=['PATCH'])
 def api_endpoint_event_like(event_id):
-    pass  # TODO...
+    # TODO
+    return '', 204  #no content http status code
+
 
 
 def perform_event_ticketmaster_api_call(url):
