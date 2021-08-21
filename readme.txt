@@ -1,3 +1,21 @@
+Events app
+
+Intended to allow users to filter what's on by a selection of event types, cities and dates. The user selects their
+event type, city and date from drop down lists on the web app and is presented with a list of events that meet
+the requested criteria. This list will also display the number of likes and dislikes each event has. The user will be
+able to click into their chosen event to get more information. The Details page will provide further details on the
+event and also connect to the Google Maps API to display the location of the event venue.
+(Connection-allowing,) the user will also be able to add their own likes or dislikes for the event if they have already
+attended it in the past.
+
+Features
+
+- Web app with drop-down list to choose search criteria
+- Results based on specified search criteria of event type, city and selected dates
+- Results list includes likes and dislikes from other users for each event displayed
+- More details page will also display the location of the event venue on Google Maps
+
+Installation
 
 Please download the code in your computer and follow the steps below (or equivalent instructions for your computer's
 specifications) to create a virtual environment in the project folder*:
