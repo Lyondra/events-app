@@ -69,18 +69,44 @@ def insert_new_record(record):
             print("DB connection is closed")
 
 
-def update_record(record):
+def update_dislikes(record):
     try:
         db_name = 'EventsApp'
         db_connection = connect_to_db(db_name)
         cur = db_connection.cursor()
         print("Connected to DB: %s" % db_name)
 
-
+        newDislikes = record['dislikes'] + 1
+        query = """UPDATE Likes SET dislikes = {} WHERE id = '{}'""".format(newDislikes, record['id'])
 
         cur.execute(query)
         db_connection.commit()
         cur.close()
+
+
+    except Exception:
+        raise DbConnectionError("Failed to read data from DB")
+
+    finally:
+        if db_connection:
+            db_connection.close()
+            print("DB connection is closed")
+
+
+def update_likes(record):
+    try:
+        db_name = 'EventsApp'
+        db_connection = connect_to_db(db_name)
+        cur = db_connection.cursor()
+        print("Connected to DB: %s" % db_name)
+
+        newLikes = record['likes'] + 1
+        query = """UPDATE Likes SET likes = {} WHERE id = '{}'""".format(newLikes, record['id'])
+
+        cur.execute(query)
+        db_connection.commit()
+        cur.close()
+
 
     except Exception:
         raise DbConnectionError("Failed to read data from DB")
@@ -113,10 +139,11 @@ def delete_record(record):
 
 
 def main():
-    # get_all_records()
     # insert_new_record(record)
     # delete_record(record)
-    # update_record(record)
+    # update_dislikes(record)
+    # update_likes(record)
+    # get_all_records()
 
 
 if __name__ == '__main__':
