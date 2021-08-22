@@ -1,7 +1,7 @@
 Events app
 
 Intended to allow users to filter what's on by a selection of event types, cities and dates. The user selects their
-event type, city and date from drop down lists on the web app and is presented with a list of events that meet
+event type, city and date from drop down lists on the web app and are presented with a list of events that meet
 the requested criteria. This list will also display the number of likes and dislikes each event has. The user will be
 able to click into their chosen event to get more information. The Details page will provide further details on the
 event and also connect to the Google Maps API to display the location of the event venue.
