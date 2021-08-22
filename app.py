@@ -131,5 +131,5 @@ def retrieve_mock_event(event_id):
     event_id = list(filter(lambda obj: obj.event_id == event_id, events))[0]
     return event_id
 
-
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
